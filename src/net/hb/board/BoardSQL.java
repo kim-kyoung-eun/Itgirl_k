@@ -47,7 +47,7 @@ public class BoardSQL {
 	
 	public void dbInsert(Boardbean bean) { //InsertController.java 
 		try{
-			sql="insert into board values((select Max(boardno)+1 from board), ?, ?, ?, sysdate)";
+			sql="insert into board values((board_seq.nextval, ?, ?, ?, sysdate)";
 			PST=CN.prepareStatement(sql);
 				//PST.setInt(1, bean.getBoardno());
 				PST.setString(1, bean.getName());
