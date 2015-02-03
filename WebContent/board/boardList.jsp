@@ -11,6 +11,7 @@
 <html>
 <head> <title> [boardList.jsp] </title> 
 </head>
+<body >
 <%!  
   private  String sql2="",  sql3=""; //select   count(*)  as cnt  from  guestreply  where  sabun=2234 ;
   private  String Gname, Gtitle; //이름, 제목필드
@@ -27,7 +28,7 @@
 %>
  <font size=5 color=blue><b> [게시판]</b></font><br>
  
- <table width='800'  border='1'>
+ <table width='800'  border='1' onload="list.do">
  
  <tr height='50' >
  	<td colspan=5  align="center">

@@ -12,7 +12,8 @@
     if(pageFile=="" || pageFile==null ||pageFile.equals("main")){
     	pageFile="main.jsp";
     }else if( pageFile.equals("list.do")){
-    	pageFile="board/boardList.jsp";
+    	//pageFile="board/boardList.jsp";
+    	pageFile="list.do";
     //}else if( pageFile.equals("insert.do")){
     //	pageFile="board/board.jsp";
     //}else if( pageFile.equals("delete.do")){
