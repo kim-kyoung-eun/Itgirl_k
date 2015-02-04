@@ -34,7 +34,6 @@ public class ActionFactory {
 			 action = new BoardController( );
 		} else if (command.equals("edit.do")) {
 			 action = new EditController();
-
 		}
 		return action;
 	}//end
