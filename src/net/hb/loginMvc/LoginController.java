@@ -58,14 +58,13 @@ public class LoginController extends HttpServlet {
 
 					try{
 						Class.forName("oracle.jdbc.driver.OracleDriver"); //1단계 드라이브
-						String url="jdbc:oracle:thin:@127.0.0.1:1521:XE";
+						//String url="jdbc:oracle:thin:@127.0.0.1:1521:XE";
+				    String url="jdbc:oracle:thin:@203.236.209.116:1521:XE"; 
 						CN=DriverManager.getConnection(url, "system", "oracle");
 						System.out.println("DB서버 연결 성공!!");
 						
 						sql="select id from member where id='"+user+"' and pw='"+pwd+"'";
-						//sql="select id from member where id='kke' and pw='1234'";
-
-						//sql="select pw from guest where sabun="+user;
+					
 						ST=CN.createStatement();
 						RS=ST.executeQuery(sql);
 					
@@ -83,11 +82,7 @@ public class LoginController extends HttpServlet {
 		
 							  dbsql.dbLogin(bean);
 							  System.out.println("Login.java 저장성공");  
-								
-								
-								
-								
-								
+														
 								HttpSession session = request.getSession();
 								session.setAttribute("id", user); 
 								System.out.println(session);// 세션관련
