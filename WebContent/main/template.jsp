@@ -24,8 +24,8 @@
     	pageFile="#";
     }else if( pageFile.equals("shoes")){
     	pageFile="#";
-    }else if( pageFile.equals("Q&A")){
-    	pageFile="#";
+    }else if( pageFile.equals("QA")){
+    	pageFile="../board/boardList.jsp";
     }else if( pageFile.equals("member")){
     	pageFile="../member/memberList.jsp";
     }else if( pageFile.equals("login")){

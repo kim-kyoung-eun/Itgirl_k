@@ -40,7 +40,7 @@
 
 		<div class="header4">
 			<a href="#"> NEW </a> <a href="#"> TOP </a> <a href="#"> OUTER </a> <a
-				href="#"> PANTS </a> <a href="#"> SHOES </a> <a href="#"> Q&A </a>
+				href="#"> PANTS </a> <a href="#"> SHOES </a> <a href="template.jsp?page=QA"> Q&A </a>
 				<a href="template.jsp?page=member"> MEMBER </a>
  <!-- MEMBER은 admin으로 로그인했을때만 띄우기 -->
 		</div>
