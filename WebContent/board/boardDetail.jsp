@@ -5,17 +5,11 @@
 <%@ taglib  prefix="fmt"  uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <html>
-<head> <title> [twoDetail.jsp] </title> 
-	<style type="text/css">
-	    input, select, option{ font-size:20pt; font-weight:bold;}
-		td,th{ font-size:20pt; font-weight:bold; font-family:궁서체; }
-		a{font-size:20pt;color:black; font-weight:bold; text-decoration:none;}
-		a:hover{font-size:24pt;  color:red;font-weight:bold; text-decoration:underline;}  
-	</style>
+<head> <title> [수정화면] </title> 
 </head>
  <font size=7 color=blue>
  <b> 
-  &nbsp;&nbsp;&nbsp;[twoDetail.jsp]
+  &nbsp;&nbsp;&nbsp;[수정화면] 
  </b></font><br>
  
  <table width='800'  border='1'>

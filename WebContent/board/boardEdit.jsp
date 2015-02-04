@@ -6,12 +6,7 @@
 
 <html>
 <head> <title>게시판 수정 </title> 
-	<style type="text/css">
-	    b,input, select, option{ font-size:20pt; font-weight:bold;}
-		td,th{ font-size:20pt; font-weight:bold; font-family:궁서체; }
-		a{font-size:20pt;color:black; font-weight:bold; text-decoration:none;}
-		a:hover{font-size:24pt;  color:red;font-weight:bold; text-decoration:underline;}  
-	</style>
+
 </head>
 
 <b> 

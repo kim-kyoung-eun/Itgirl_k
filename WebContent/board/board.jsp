@@ -3,16 +3,11 @@
 
 <html>
 <head> <title> [게시판] </title> 
-	<style type="text/css">
-	    b,input{ font-size:20pt; font-weight:bold;}
-		td,th{ font-size:10pt; font-weight:bold;}
-		a{font-size:20pt;color:black; font-weight:bold; text-decoration:none;}
-		a:hover{font-size:24pt;  color:red;font-weight:bold; text-decoration:underline;}  
-	</style>	
+
 </head>
 
 <body>
- <font size=7 color=blue>[게시판 입력화면] </font><p>
+ [게시판 입력화면] <p>
 	<form name="myform"   action="GuestServlet">
         <!-- 보물덩어리 -->
         <input type="hidden"  name="command" value="insert.do">	

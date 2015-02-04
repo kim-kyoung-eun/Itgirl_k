@@ -36,7 +36,7 @@
  	</td>      
  </tr>
  
- <tr bgcolor="yellow"  height='50'  align="center">
+ <tr bgcolor="cccccc"   align="center">
  	<td>no</td>     <td>이름</td>   
  	<td>제목</td>     <td>내용</td>   <td>날짜</td>      
  </tr>
@@ -62,8 +62,7 @@
  	<a href="GuestServlet?command=boardDel.do">[데이타삭제]</a> &nbsp;
  	<a href="GuestServlet?command=list.do">[데이타출력]</a> 
  </h1>
- <p><br><br><br><br>
- <p><br><br><br><br>
+
 </body>
 </html>
 
