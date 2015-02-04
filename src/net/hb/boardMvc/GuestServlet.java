@@ -21,7 +21,7 @@ public class GuestServlet extends HttpServlet {
 		 	
 		 	ActionFactory af=ActionFactory.getInstance();
 		 	Action action=af.getAction(command);
-		 	if(action.equals("boardList.do")) { action=af.getAction("template.jsp?pageFile="+command); }
+		 	//if(action.equals("boardList.do")) { action=af.getAction("template.jsp?pageFile="+command); }
 		  action.user(request, response);		
 		}//end
 	
