@@ -31,7 +31,8 @@
 <%
   try{
   	Class.forName("oracle.jdbc.driver.OracleDriver");//1단계 드라이브로드
-    String url="jdbc:oracle:thin:@127.0.0.1:1521:XE"; //DB서버정보기술 430페이지 12라인
+    //String url="jdbc:oracle:thin:@127.0.0.1:1521:XE"; //DB서버정보기술 430페이지 12라인
+	String url="jdbc:oracle:thin:@203.236.209.116:1521:XE";  
     CN=DriverManager.getConnection(url, "system","oracle"); //32라인 
   	//out.println("<h1>DB서버 연결 성공!!!!! </h1>");
   	System.out.println("<h1>DB서버 연결 성공!!!!! </h1>");

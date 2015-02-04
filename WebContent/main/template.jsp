@@ -28,6 +28,8 @@
     	pageFile="#";
     }else if( pageFile.equals("member")){
     	pageFile="../member/memberList.jsp";
+    }else if( pageFile.equals("login")){
+    	pageFile="../login/login.jsp";   	
     }else{
     	pageFile="template.jsp";
     }

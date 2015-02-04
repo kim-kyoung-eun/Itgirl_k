@@ -14,7 +14,19 @@
 		<div class="header3"
 			style="background-color: #EBEBEB; color: #353535; width: 1800px; height: 30px;">
 			<div class="header3-1">
-				<a href="template.jsp?page=login">LOGIN</a>|<a
+			<%
+			if(session.getAttribute("id")==null || session.getAttribute("id")=="" ) {
+			%>
+			<a href="template.jsp?page=login">LOGIN</a>
+			<%
+			} else {
+			%>
+			<%=session.getAttribute("id") %>¥‘ æ»≥Á«œººø‰!<br>
+			    <form method="post" action="../login/logOut.jsp">
+			    <input type="submit" value="∑Œ±◊æ∆øÙ">
+			    </form>
+			<% } %>	
+				|<a
 					href="template.jsp?page=join">JOIN</a>|<a href="#">CART</a> |<a
 					href="#">ORDER</a>|<a href="#">MYPAGE</a>
 			</div>

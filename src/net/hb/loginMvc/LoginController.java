@@ -87,14 +87,14 @@ public class LoginController extends HttpServlet {
 								session.setAttribute("id", user); 
 								System.out.println(session);// 세션관련
 
-								response.sendRedirect("template.jsp?command=main"); 
+								response.sendRedirect("../Itgirl/main/template.jsp"); 
 							} else {				//response.sendRedirect("template.jsp"); 
 								System.out.println("ddd");
 							}
 						
 							
 						}  else {
-							response.sendRedirect("login/loginChk.jsp"); 
+							response.sendRedirect("../login/loginChk.jsp"); 
 						}
 	
 					
