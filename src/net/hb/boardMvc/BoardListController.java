@@ -18,24 +18,21 @@ import net.hb.board.BoardSQL;
 import net.hb.board.Boardbean;
 
 public class BoardListController implements Action {
-	 public void user(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-				response.setCharacterEncoding("euc-kr");
-				response.setContentType("text/html; charset=euc-kr");
-				PrintWriter  out = response.getWriter();
-				System.out.println("[BoardListController.java]");
-
-	
-		  System.out.println("BoardList.jsp 성공");  
-		  response.sendRedirect("board/boardList.jsp"); //list.do=ListController.java
-	 } //user end=========================================================
+		public  void user(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+					response.setCharacterEncoding("euc-kr");
+					response.setContentType("text/html; charset=euc-kr");
+					PrintWriter  out = response.getWriter();
+					System.out.println("<h1>[ListController.java]</h1>");
+			  out.println("<img src='images/bar.gif'><p>");
+			  
+			  BoardSQL  dbsql = new  BoardSQL( );
+			  List data =dbsql.dbSelect();  //561페이지  25번라인 
+			  request.setAttribute("naver", data);
+			  RequestDispatcher dis= request.getRequestDispatcher("GuestServlet?command=boardList.do");
+			  dis.forward(request, response);
+		} //end
 	
 }//class END
-
-
-
-
-
-
 
 
 

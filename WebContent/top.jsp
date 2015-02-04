@@ -13,7 +13,7 @@
 <div align="right">
 		<img src="images/logo.gif" height="70" width=900 ><p>
 		<a href="template.jsp?pageFile=main">메인| </a>
-		<a href="template.jsp?pageFile=list.do">방명록| </a>
+		<a href="template.jsp?pageFile=boardList">방명록| </a>
 
 
 	<%

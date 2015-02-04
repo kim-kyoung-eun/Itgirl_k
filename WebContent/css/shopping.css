@@ -1,0 +1,259 @@
+html, body {
+    height: 100%;
+}
+html, body, pre,
+h1, h2, h3, h4, h5, h6,
+dl, dt, dd, ul, li, ol,
+th, td, p, blockquote,
+form, fieldset, legend,
+menu, nav, section, hgroup, article, header, aside, footer,
+input, select, textarea, button {
+    margin: 0;
+    padding: 0;
+}
+
+
+img, fieldset,button {
+    border:0 none;
+}
+img {
+    vertical-align: top;
+}
+li {
+    list-style: none;
+}
+hr, caption, legend {
+    display: none;
+}
+
+button {
+    overflow: hidden;
+    cursor: pointer;
+}
+button span {
+    visibility: hidden;
+}
+address, em {
+    font-style: normal;
+}
+button, input, select, textarea, a {
+    vertical-align: middle;
+}
+select {
+    line-height: 18px;
+    height: 18px;
+}
+input:focus {
+    outline: none;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+
+<!--Header -->
+#header {
+	width: 100%;
+	height: auto;
+}
+#header .hr{
+	position: relative;
+	margin:0 0 20 250;
+}
+.header2 {
+	position: relative;
+	margin:20 0 0 650;
+}
+
+.header2 img {
+	width: 300px;
+	height: 100px;
+	display: block;
+}
+.happy{
+	position: absolute;
+	top:40px;
+	left:250px;
+}
+
+.header3 {
+	position: relative;
+	top:0px;
+}
+.header3-1{
+	position: relative;
+	top:5px;
+	left:1000px;
+}
+.header3 a {
+	color:#3A3A3A;
+	padding:10px;
+	font-size: 10pt;
+	font-family: SeoulNamsan EB;
+	text-decoration: none;
+}
+
+.header3 a:hover {
+	color: #FF1AB2;
+	padding:10px;
+	font-size: 10pt;
+	font-weight: bold;
+	font-family: SeoulNamsan EB;
+}
+
+.header4 {
+	position:relative;
+	margin:0 0 0 220px;
+	font-size: 16pt;
+	font-weight: bold;
+	font-family: SeoulNamsan EB;
+	padding:30 0 0 0px;
+	
+}
+
+
+.header4 a {
+	color: #2D2B2B;
+	width: 100%;
+	text-decoration: none;
+	margin: 0 65 0 65px;
+}
+
+.header4 a:hover {
+	color: #FF1AB2;
+}
+
+<!--main -->
+#main {
+	position:relative;
+	top:0px;
+}
+#main img{
+	position:relative;
+	margin:0 0 30 0px;
+	height:400px; 
+	width:480px;
+}
+#main2{
+	position:relative;
+	top:0px;
+}
+#main2 img{
+	position:relative;
+	right:0px;
+	height:200px; 
+	width:200px;
+}
+#main3{
+	position:relative;
+	top:0px;
+	padding:0px;
+	
+}
+#main3 img{
+	width:270px;
+}
+#item{
+	position:relative;
+	margin-top:30px;
+}
+
+.item{
+	font-family: serif;
+	font-size: 15pt;
+	font-weight: bold;
+}
+#main4{
+	position:relative;
+	top:0px;
+	padding:0px;
+}
+#main4 img{
+	position:relative;
+	top:30px;
+	bottom:30px;
+	width:271px;
+	height:300px;
+	
+}
+#memberList{
+    width:1080px;
+	margin:10px;
+	font-size: 13pt;
+	font-family: SeoulNamsan EB;
+}
+#memberList a{
+	color:#3A3A3A;
+	font-size: 13pt;
+	font-family: SeoulNamsan EB;
+	text-decoration: none;
+	
+}
+#memberList a:hover{
+	color: #FF1AB2;
+	font-size: 13pt;
+	font-weight: bold;
+	font-family: SeoulNamsan EB;
+}
+#memberList .tr{
+	border:1px solid #FFEAEA;
+}
+#memberList .tr td{
+	border:1px solid #FFEAEA;
+}
+<!-- join -->
+
+
+table {
+	font-family: SeoulNamsan EB;
+	position:absolute;
+	top:200px;
+	padding: 0px;
+}
+
+
+#t1 {
+	font-family: SeoulNamsan B;
+	width: 700px;
+	font-size: 11pt;
+	border: 1px solid #D5D5D5;
+	margin: 30px;
+	padding: 0px;
+}
+#t1 td{
+	border: 1px solid #D5D5D5;
+}
+#t2{
+	position:relative;
+	right:30px;
+	font-family: SeoulNamsan B;
+	width: 100%;
+	font-size: 11pt;
+	margin: 30px;
+	padding: 10px;
+	text-align: center;
+}
+
+input {
+	font-family: SeoulNamsan B;
+	border: 1px solid #D5D5D5;
+	font-size: 11pt;
+	width: 100px;
+}
+
+textarea {
+	font-family: "¸¼Àº °íµñ";
+	width: 700px;
+}
+
+<!--bottom-->
+#bottom{
+	position: relative;
+	bottom: 0px;
+	padding: 100 0 0 0px;
+}

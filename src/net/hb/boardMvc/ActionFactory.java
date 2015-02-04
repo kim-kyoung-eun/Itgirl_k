@@ -26,12 +26,10 @@ public class ActionFactory {
 			 action = new EditPreController( );
 		} else if (command.equals("board.do")) {
 			 action = new BoardController( );
-		} else if (command.equals("boardDel.do")) {
-			 action = new BoardDelController( );
 		} else if (command.equals("boardList.do")) {
 			 action = new BoardListController( );
-		} else if (command.equals("board.do")) {
-			 action = new BoardController( );
+		} else if (command.equals("boardDel.do")) {
+			 action = new BoardDelController( );
 		} else if (command.equals("edit.do")) {
 			 action = new EditController();
 		}

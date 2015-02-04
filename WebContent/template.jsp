@@ -11,12 +11,10 @@
 	String pageFile = request.getParameter("pageFile");
     if(pageFile=="" || pageFile==null ||pageFile.equals("main")){
     	pageFile="main.jsp";
-    }else if( pageFile.equals("list.do")){
-    	pageFile="board/boardList.jsp";
+    }else if( pageFile.equals("boardList")){
+        pageFile="boardlist";
     	//pageFile="list.do";
     //}else if( pageFile.equals("insert.do")){
-    //	pageFile="board/board.jsp";
-    //}else if( pageFile.equals("delete.do")){
     //	pageFile="board/boardDelete.jsp";
     //}else if( pageFile.equals("detail.do")){
     //	pageFile="board/boardDetail.jsp";
@@ -25,7 +23,7 @@
     }else if( pageFile.equals("login")){
     	pageFile="login/login.jsp";
     }else{
-    	pageFile="template.jsp";
+    	pageFile="main.jsp";
     }
 
 %>
@@ -39,7 +37,7 @@
 		
 		<tr>
 			<td width="100%" colspan=2 align="center">
-				<jsp:include page="<%= pageFile %>"   /> 
+				<jsp:include page="<%=pageFile %>"/> 
 			</td>
 		</tr>
 		
