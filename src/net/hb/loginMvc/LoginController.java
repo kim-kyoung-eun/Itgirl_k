@@ -17,6 +17,11 @@ import  java.util.*;
 import  javax.servlet.http.*;
 import  javax.servlet.*;
 
+import net.hb.board.BoardSQL;
+import net.hb.board.Boardbean;
+import net.hb.login.LoginSQL;
+import net.hb.login.Loginbean;
+
 @WebServlet("/login.do")
 
 
@@ -69,6 +74,20 @@ public class LoginController extends HttpServlet {
 							System.out.println("pwd : " +imsi);
 							if(imsi.equals(user)) {				
 								
+							  System.out.println("넘어온아이디=" + imsi );			   
+					   
+							  LoginSQL  dbsql = new  LoginSQL( );
+							  Loginbean  bean = new Loginbean( );
+
+							  bean.setUserid(imsi);
+		
+							  dbsql.dbLogin(bean);
+							  System.out.println("Login.java 저장성공");  
+								
+								
+								
+								
+								
 								HttpSession session = request.getSession();
 								session.setAttribute("id", user); 
 								System.out.println(session);// 세션관련
@@ -77,6 +96,7 @@ public class LoginController extends HttpServlet {
 							} else {				//response.sendRedirect("template.jsp"); 
 								System.out.println("ddd");
 							}
+						
 							
 						}  else {
 							response.sendRedirect("login/loginChk.jsp"); 

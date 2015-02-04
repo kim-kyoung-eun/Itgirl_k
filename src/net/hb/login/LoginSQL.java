@@ -7,6 +7,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import net.hb.board.Boardbean;
 import net.hb.login.LoginSQL;
 import net.hb.login.Loginbean;
 
@@ -39,16 +40,23 @@ public class LoginSQL {
 		
 	public Loginbean dbLogin(Loginbean bean) { //LoginController.java
 
-		try {
-			sql = "select * from member where id='"+bean.getUserid()+"' and pw='"+bean.getPwd()+"' "  ;
+		try{
+			sql="insert into login values('"+bean.getUserid()+"' , sysdate , sysdate)";
 			ST=CN.createStatement();
-			RS=ST.executeQuery(sql);
-			if(RS.next()==true) {
-				bean.setUserid("id");	
-				bean.setPwd("pw");
-			}
-			System.out.println("dbLogin(DBbean) 출력성공\n");
-		}catch(Exception ex) {System.out.println(ex.toString()); }
+			ST.executeUpdate(sql);
+			System.out.println("dbLogin(DBbean) 저장성공\n");
+		}catch(Exception ex) {System.out.println(" 저장실패 "+ex.toString());}
+		return bean;
+	}
+	
+	public Loginbean dbLogout(Loginbean bean) { //LoginController.java
+
+		try{
+			sql="update login set logout_date=sysdate where log_id='"+bean.getUserid()+"'";
+			ST=CN.createStatement();
+			ST.executeUpdate(sql);
+			System.out.println("dbLogout(DBbean) 저장성공\n");
+		}catch(Exception ex) {System.out.println(" 저장실패 "+ex.toString());}
 		return bean;
 	}
 	
