@@ -47,12 +47,14 @@ public class BoardSQL {
 	
 	public void dbInsert(Boardbean bean) { //InsertController.java 
 		try{
-			sql="insert into board values((board_seq.nextval, ?, ?, ?, sysdate)";
+			sql="insert into board (boardno, name, title, content, nalja, boardtype, pass)";
+			sql+= "values(board_seq.nextval, ?, ?, ?, sysdate, 1, ?)";
 			PST=CN.prepareStatement(sql);
 				//PST.setInt(1, bean.getBoardno());
 				PST.setString(1, bean.getName());
 				PST.setString(2, bean.getTitle());
 				PST.setString(3, bean.getContent());
+				PST.setString(4, bean.getPass());
 			PST.executeUpdate();
 			System.out.println("dbInsert(DBbean) 저장성공\n");
 		}catch(Exception ex) {System.out.println(" 저장실패 "+ex.toString());}
@@ -60,11 +62,12 @@ public class BoardSQL {
 	
 	public void dbUpdate(Boardbean bean) {
 		try {
-			sql="update board set name=?, title=?, content=? where boardno="+bean.getBoardno();
+			sql="update board set name=?, title=?, content=? , pass=? where boardno="+bean.getBoardno() + " and boardtype=1 ";
 			PST=CN.prepareStatement(sql);
 			PST.setString(1, bean.getName());
 			PST.setString(2, bean.getTitle());
 			PST.setString(3, bean.getContent());
+			PST.setString(4, bean.getPass());			
 			PST.executeUpdate();
 			System.out.println("dbUpdate(DBbean) -------저장성공\n");
 		}catch (Exception ex) {System.out.println("수정실패"+ ex.toString()); }
@@ -95,16 +98,35 @@ public class BoardSQL {
 	public Boardbean dbDetail(String data) { //DetatilController.java
 	Boardbean bean = new Boardbean();		
 		try {
-			sql = "select * from board where boardno="+data ;
+			
+			sql = "select * from board where boardno="+data+ " and boardtype=1 " ;
+			System.out.println(sql);
 			ST=CN.createStatement();
 			RS=ST.executeQuery(sql);
 			if(RS.next()==true) {
-		
+				
+				if(RS.getString("board_count") == "" || RS.getString("board_count") == null ) { 
+					sql="update board set board_count=1 where boardno="+data + " and boardtype=1 ";
+					System.out.println("--------------" + RS.getString("board_count"));
+					ST=CN.createStatement();
+					ST.executeUpdate(sql);		
+				} else {
+					sql="update board set board_count=(select Max(board_count)+1 as cnt from board where boardno="+data+") where boardno="+data + " and boardtype=1 ";
+					System.out.println("---bbbbbb----" + RS.getString("board_count"));
+					ST=CN.createStatement();
+					ST.executeUpdate(sql);		
+				}
+				
+				
 				bean.setBoardno(RS.getInt("boardno"));// =>필드 => getter로 넘어감
 				bean.setName(RS.getString("name"));
 				bean.setTitle(RS.getString("title"));
 				bean.setNalja(RS.getDate("nalja"));
 				bean.setContent(RS.getString("content"));	
+				//bean.setBoardcount(RS.getString("board_count"));	
+
+				
+				
 			}
 			System.out.println("dbDetail(DBbean) 출력성공\n");
 		}catch(Exception ex) {System.out.println(ex.toString()); }
@@ -113,7 +135,35 @@ public class BoardSQL {
 	
 	public void dbDelete(String data) {//DeleteController.java
 
-		String sql ="delete from board where boardno= "+data;
+		String sql ="delete from board where boardno= "+data+ " and boardtype=1 " ;
+		try {
+			ST=CN.createStatement();
+			ST.executeUpdate(sql);
+			System.out.print(data +" : 삭제성공" );
+		} catch (SQLException ex) { System.out.println(" 저장실패 "+ex.toString());}
+	}//dbDelete(String)end
+
+	
+	public void dbReplyInsert(Boardbean bean) { //InsertController.java 
+		try{
+			
+      //sql="insert into board_reply values(reply_seq.nextval,'"+data2+"','"+data3+"',sysdate, '"+data4+"',"+data1+")";	 
+			sql="insert into board_reply values(";
+			sql+= "reply_seq.nextval, ?, ?, sysdate, ?, ?)";
+			PST=CN.prepareStatement(sql);
+				//PST.setInt(1, bean.getBoardno());
+				PST.setString(1, bean.getWriter());
+				PST.setString(2, bean.getReply());
+				PST.setString(3, bean.getRpass());
+				PST.setInt(4, bean.getBoardno());
+			PST.executeUpdate();
+			System.out.println("dbReplyInsert(DBbean) 저장성공\n");
+		}catch(Exception ex) {System.out.println(" 저장실패 "+ex.toString());}
+	}
+	
+	public void dbReplyDelete(String data) {//DeleteController.java
+
+		String sql ="delete from  board_reply  where  replyno="+data ;
 		try {
 			ST=CN.createStatement();
 			ST.executeUpdate(sql);

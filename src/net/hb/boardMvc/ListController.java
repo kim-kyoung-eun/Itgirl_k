@@ -30,6 +30,7 @@ public class ListController implements Action {
 			  request.setAttribute("naver", data);
 			  RequestDispatcher dis= request.getRequestDispatcher("board/boardList.jsp");
 			  dis.forward(request, response);
+			  //response.sendRedirect("board/boardList.jsp");
 		} //end
 	
 }//class END

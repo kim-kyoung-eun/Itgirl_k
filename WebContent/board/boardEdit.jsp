@@ -32,9 +32,14 @@
 <p>
  <h1>
    &nbsp;&nbsp;&nbsp;&nbsp;
- 	<a href="board.jsp">[데이타입력]</a> &nbsp;
- 	<a href="boardDelete.jsp">[데이타삭제]</a> &nbsp;
- 	<a href="GuestServlet?command=list.do">데이타출력</a>  
+   <!-- 
+ 	<a href="GuestServlet?command=board.do">[데이타입력]</a> &nbsp;
+ 	<a href="GuestServlet?command=delete.do&boardno=${daum.boardno}">[데이타삭제]</a> &nbsp;
+ 	<a href="GuestServlet?command=list.do">데이타출력</a>     
+    -->
+ 	<a href="main/template.jsp?page=board">[데이타입력]</a> &nbsp;
+ 	<a href="GuestServlet?command=delete.do&boardno=${daum.boardno}">[데이타삭제]</a> &nbsp;
+ 	<a href="main/template.jsp?page=QA">데이타출력</a>  
  </h1>
  <p><br><br><br><br>
  <p><br><br><br><br>

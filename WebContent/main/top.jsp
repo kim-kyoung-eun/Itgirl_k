@@ -19,12 +19,16 @@
 			%>
 			<a href="template.jsp?page=login">LOGIN</a>
 			<%
-			} else {
+			} else { //회원이면
+				
+				if(session.getAttribute("admin").equals("1")) {out.print("관리자"); //관리자이면
 			%>
-			<%=session.getAttribute("id") %>님 안녕하세요!<br>
-			    <form method="post" action="../login/logOut.jsp">
-			    <input type="submit" value="로그아웃">
-			    </form>
+				|<a href="admin/admin.jsp">관리자페이지</a>
+			<%
+				
+				} else {out.print(session.getAttribute("id"));}
+			%>
+			   <a href="../login/logOut.jsp">LOGOUT</a>
 			<% } %>	
 				|<a
 					href="template.jsp?page=join">JOIN</a>|<a href="#">CART</a> |<a

@@ -7,7 +7,7 @@
 <title>index.jsp</title>
 	<script type="text/javascript">
 	// alert("축하드립니다. 저희 홈피방문을 환영합니다.");
-	 location.href="template.jsp";
+	 location.href="main/template.jsp";
 	</script>
 </head>
 <body>

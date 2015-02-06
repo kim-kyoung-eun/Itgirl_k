@@ -63,13 +63,15 @@ public class LoginController extends HttpServlet {
 						CN=DriverManager.getConnection(url, "system", "oracle");
 						System.out.println("DB서버 연결 성공!!");
 						
-						sql="select id from member where id='"+user+"' and pw='"+pwd+"'";
+						sql="select id, admin from member where id='"+user+"' and pw='"+pwd+"'";
 					
 						ST=CN.createStatement();
 						RS=ST.executeQuery(sql);
 					
 						if(RS.next() == true) {
 							String imsi = RS.getString("id");
+							String admin = RS.getString("admin");
+							
 							System.out.println("pwd : " +imsi);
 							if(imsi.equals(user)) {				
 								
@@ -85,9 +87,12 @@ public class LoginController extends HttpServlet {
 														
 								HttpSession session = request.getSession();
 								session.setAttribute("id", user); 
+								session.setAttribute("admin", admin);
 								System.out.println(session);// 세션관련
 
-								response.sendRedirect("../Itgirl/main/template.jsp"); 
+								 
+								response.sendRedirect("../Itgirl/main/template.jsp");
+								
 							} else {				//response.sendRedirect("template.jsp"); 
 								System.out.println("ddd");
 							}

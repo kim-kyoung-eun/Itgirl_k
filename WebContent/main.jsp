@@ -40,21 +40,21 @@ $(function(){
 
     <ul>
         <li>
-           <a href="template.jsp"><img src="images/0620030001993.jpg" class="random" /></a> 
+           <a href="template.jsp"><img src="images/logo.png" class="random" /></a> 
             <div class="label_text">
                 <p>.......<br>
                 .................. </p>
             </div>
         </li>
         <li>
-           <a href="template.jsp"><img src="images/0620030001993.jpg" class="random" /></a>
+           <a href="template.jsp"><img src="images/logo.png" class="random" /></a>
 
             <div class="label_text">
                 <p> TGIF쇼핑몰 인기상품<br> 화려한 이벤트와 공짜상품 </p>
             </div>
         </li>
         <li>
-           <a href="template.jsp"><img src="images/0620030001993.jpg" class="random" /></a>
+           <a href="template.jsp"><img src="images/logo.png" class="random" /></a>
             <div class="label_text">
                 <p>********<br>
                 ***************** </p>

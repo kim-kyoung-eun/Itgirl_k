@@ -2,6 +2,7 @@ package net.hb.boardMvc;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,6 +31,7 @@ public class BoardListController implements Action {
 			  request.setAttribute("naver", data);
 			  RequestDispatcher dis= request.getRequestDispatcher("GuestServlet?command=boardList.do");
 			  dis.forward(request, response);
+
 		} //end
 	
 }//class END

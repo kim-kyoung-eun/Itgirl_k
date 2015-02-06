@@ -32,8 +32,12 @@ public class ActionFactory {
 			 action = new BoardDelController( );
 		} else if (command.equals("edit.do")) {
 			 action = new EditController();
+		} else if (command.equals("Replyinsert.do")) {
+			 action = new BoardReplyInsertController();
+		} else if (command.equals("boardReplyDel.do")) {
+			 action = new BoardReplyDeleteController();		
 		}
 		return action;
-	}//end
+	}//end 
 	
 }//ActionFactory class end

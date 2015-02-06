@@ -14,8 +14,8 @@
  
  <table width='800'  border='1'>
  <tr bgcolor="yellow"  height='60'  align="center">
- 	<td>사번</td>     <td>이름</td>   
- 	<td>제목</td>     <td>날짜</td>   <td>급여</td>      
+ 	<td>번호</td>     <td>이름</td>   
+ 	<td>제목</td>     <td>날짜</td>   <td>내용</td>      
  </tr> 
  <tr height='60'>
  	<td> ${bean.boardno} </td>
@@ -29,12 +29,19 @@
 <p>
  <h1>
     &nbsp;&nbsp;&nbsp;
- 	<a href="GuestServlet?command=board.do"">[데이타입력]</a> &nbsp;
- 	<a href="GuestServlet?command=boardDel.do">[삭제]</a> &nbsp;
+ 	<!-- <a href="GuestServlet?command=board.do">[데이타입력]</a> &nbsp; -->
  	<a href="GuestServlet?command=editPre.do&idx=${bean.boardno}">[수정]</a> &nbsp;
- 	<a href="GuestServlet?command=list.do">[데이타출력]</a> 
+ 	<a href="./main/template.jsp?page=QA">[목록]</a> 
  </h1>
- <p><br><br><br><br>
+ <p>
+  <!--  댓글 달기 연습  -->
+ <hr color="#1F50B5"><p>
+    <jsp:include page="boardReply.jsp" flush="false">
+       <jsp:param value="${bean.boardno}" name="boardno"/>
+       <jsp:param value="${bean.name}" name="Gname"/>
+       <jsp:param value="${bean.title}" name="Gtitle"/>
+    </jsp:include>
+ <br><br><br><br>
  <p><br><br><br><br>
 </body>
 </html>

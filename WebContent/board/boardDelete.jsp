@@ -9,7 +9,7 @@
   	<!-- 보물덩어리 -->
     <input type="hidden"  name="command" value="delete.do">	
 	<b><font color=red>삭제할 번호: </font></b> 
-	<input type=text name="sabun"  > 
+	<input type=text name="boardno"  > 
 	<input type="submit"  value="삭제"> 
   </form>
  <p>
