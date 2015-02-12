@@ -1,23 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <html>
 <head>
 <title>[bottom.jsp]</title>
-<style type="text/css">
-  	td, th{font-size:16pt; font-weight:bold}
-  	a{font-size:18pt; font-weight:bold; text-decoration:none;}
-  	a:hover{font-size:20pt; font-weight:bold; text-decoration:underline;}
-  	
-  </style>
+<link rel="stylesheet" type="text/css" href="./css/shopping.css">
 </head>
+
 <body>
-	<div align="center" style="font-size:16pt; font-weight:bold; ">
-	  <b>
-	    HB ENI(주)  
-	    회사소개 | 광고 | 검색등록 | 제휴제안 | 이용약관 |
-	       ⓒNAVER Corp.
-	  </b>
+	<div id="bottom"
+		style="background-color: #EBEBEB; color: #353535; width: 1800px; height: 30px; position:relative; margin-top:100px;"></div>
+	<div align="center">
+		<img style="position:relative; margin-top:5px;" src="./images/bottom.png">
 	</div>
+	
 </body>
 </html>
+
+

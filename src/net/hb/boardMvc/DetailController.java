@@ -30,9 +30,10 @@ public class DetailController implements Action  {
 		  String data = request.getParameter("idx");
 		  BoardSQL  dbsql = new  BoardSQL( );
 		  Boardbean bean = dbsql.dbDetail(data); 
-		 
+		  //Boardbean bean2 = dbsql.dbReplyDetail(data); 	 
 		  request.setAttribute("bean", bean); //bean개체를 twoDetail.jsp
-		  RequestDispatcher dis= request.getRequestDispatcher("board/boardDetail.jsp");
+		  //request.setAttribute("bean2", bean2); //bean2개체를 boardReplyDetail.jsp
+		  RequestDispatcher dis= request.getRequestDispatcher("./template.jsp?page=boardDetail");
 		  dis.forward(request, response);
 	 } //end
 	

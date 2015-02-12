@@ -33,7 +33,8 @@ public class EditPreController implements Action {
 		  request.setAttribute("daum", bean);
 		  
 		  RequestDispatcher dis= null ;
-		  dis =request.getRequestDispatcher("board/boardEdit.jsp");
+		  //dis =request.getRequestDispatcher("board/boardEdit.jsp");
+		  dis =request.getRequestDispatcher("./template.jsp?page=boardEdit");
 		  dis.forward(request, response);
 	 } //end
 	

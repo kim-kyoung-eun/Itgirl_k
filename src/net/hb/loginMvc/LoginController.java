@@ -91,7 +91,7 @@ public class LoginController extends HttpServlet {
 								System.out.println(session);// 세션관련
 
 								 
-								response.sendRedirect("../Itgirl/main/template.jsp");
+								response.sendRedirect("./template.jsp");
 								
 							} else {				//response.sendRedirect("template.jsp"); 
 								System.out.println("ddd");
@@ -99,7 +99,7 @@ public class LoginController extends HttpServlet {
 						
 							
 						}  else {
-							response.sendRedirect("../login/loginChk.jsp"); 
+							response.sendRedirect("./login/loginChk.jsp"); 
 						}
 	
 					

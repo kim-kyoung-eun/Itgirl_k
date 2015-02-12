@@ -1,12 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <html>
 <head>
 <title>[bottom.jsp]</title>
-<style>
-@import url('../css/shopping.css');
-</style>
+<link rel="stylesheet" type="text/css" href="../css/shopping.css">
 </head>
 
 <body>

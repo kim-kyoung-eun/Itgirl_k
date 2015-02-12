@@ -26,13 +26,12 @@
     	pageFile="#";
     }else if( pageFile.equals("QA")){
     	pageFile="../board/boardList.jsp";
-    	//pageFile="../board/boardList_old.jsp";
-    	//pageFile="../GuestServlet?command=list.do";
     }else if( pageFile.equals("boardDetail")){
     	pageFile="../board/boardDetail.jsp";
     }else if( pageFile.equals("board")){
     	pageFile="../board/board.jsp";
-    	//pageFile="../GuestServlet?command=board.do";
+    }else if( pageFile.equals("boardEdit")){
+    	pageFile="../board/boardEdit.jsp";
     }else if( pageFile.equals("member")){
     	pageFile="../member/memberList.jsp";
     }else if( pageFile.equals("login")){

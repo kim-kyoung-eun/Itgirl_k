@@ -16,6 +16,8 @@ public class ActionFactory {
 		
 		if (command.equals("list.do")) {
 			 action = new ListController();
+			 //action = new BoardPageController();
+
 		} else if (command.equals("insert.do")) {
 		 	action = new InsertController();
 		} else if (command.equals("detail.do")) {

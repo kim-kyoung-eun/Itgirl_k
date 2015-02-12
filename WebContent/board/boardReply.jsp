@@ -7,13 +7,7 @@
 <html>
 <head> <title> [boardReply.jsp] </title> 
 	<style type="text/css">
-	   input,b{ font-size:13pt; font-weight:bold; font-family:Yoon 사춘기 Light_TT;}
-	   td { font-size:13pt; font-weight:bold; font-family:Yoon 사춘기 Light_TT;}
-	   a{text-decoration:none; font-weight:bold; color:black; }
-	   a:hover{
-	     font-family:Yoon 사춘기 Light_TT;; 
-	     text-decoration:underline; color:#cccccc;
-	   }
+
 	</style>
 	<script type="text/javascript">
 
@@ -61,22 +55,27 @@ String data3= request.getParameter("Gtitle");
 %>
  <form name="gt_rpy" action="GuestServlet">
  <input type="hidden"  name="command" value="Replyinsert.do">	
- <table width='800'  border='1'  >
+<table class="boardlist2" width="70%" >
    <tr>
- 	<td bgcolor="pink" width="130" align="center"> 글쓴이  </td>
- 	<td><input type="text" name="writer" size="30"></td>
- 	<td rowspan="3" align="center" bgcolor="pink">
+ 	<td align="center"><b>[댓글달기]</b></td>  
+   </tr>
+</table>
+<table class="boardlist2" width="70%" >
+   <tr>
+ 	<td width="10%" align="center" class="boardlist2_td"> 글쓴이  </td>
+ 	<td width="80%"><input type="text" name="writer" class="boardarea"></td>
+ 	<td width="10%"rowspan="3" align="center" ">
  	<input type="submit" value="댓글저장" style="height:80px">
  	</td>  
    </tr>
    <tr>     
-   	<td bgcolor="pink" width="130" align="center"> 내 용 </td>
-   	<td><textarea name="content" rows=3 cols=70></textarea>
+   	<td align="center" class="boardlist2_td"> 내 용 </td>
+   	<td><textarea name="content" rows=3 cols=70 class="boardarea"></textarea>
     </td>                  
  </tr>
     <tr>     
-   	<td bgcolor="pink" width="130" align="center"> 비밀번호 </td>
-   	<td><input type="password" name="pass"></td>                  
+   	<td align="center" class="boardlist2_td"> 비밀번호 </td>
+   	<td><input type="password" name="pass" class="boardarea"></td>                  
  </tr>
  </table>
  <input type="hidden" name="boardno" value="<%=data1 %>">
@@ -84,11 +83,11 @@ String data3= request.getParameter("Gtitle");
  <br>
  
 
- <table width='800'  border='1'>
- <tr bgcolor="#C6FFFF" align="center">
- 	<td width="130">닉네임</td>  
- 	<td>내용</td>      
- 	<td width="130">삭제</td>    
+<table class="boardlist2" width="70%" >
+ <tr align="center">
+ 	<td width="10%" class="boardlist2_td">닉네임</td>  
+ 	<td width="80%" class="boardlist2_td">내용</td>      
+ 	<td width="10%" class="boardlist2_td">삭제</td>    
  </tr>
   <%
 	

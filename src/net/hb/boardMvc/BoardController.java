@@ -27,7 +27,7 @@ public class BoardController implements Action {
 
 	
 		  System.out.println("Board.jsp ¼º°ø");  
-		  RequestDispatcher dis= request.getRequestDispatcher("board/board.jsp");
+		  RequestDispatcher dis= request.getRequestDispatcher("./template.jsp?page=board");
 		  dis.forward(request, response);
 		  //response.sendRedirect("board/board.jsp"); //list.do=ListController.java
 	 } //user end=========================================================

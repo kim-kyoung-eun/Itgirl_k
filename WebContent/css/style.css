@@ -1,0 +1,226 @@
+﻿@font-face { 
+font-family:ngttf; 
+src:url(../images/malgun.ttf); 
+}
+@font-face { 
+font-family:ngeot; 
+src:url(../images/malgunbd.ttf); 
+}
+
+body { 
+font-family:malgun,malgunbd,ngttf,ngeot,dotum,"맑은 고딕","돋음",sans-serif;  
+}
+th {
+	FONT-SIZE: 11px;   FONT-FAMILY: malgun, malgunbd,"맑은 고딕",ngttf,ngeot,dotum,"돋음";
+}
+TD {
+	FONT-SIZE: 11px;   FONT-FAMILY: malgun, malgunbd,"맑은 고딕",ngttf,ngeot,dotum,"돋음";
+}
+
+
+
+.input_box {width:expression(this.parentNode.clientWidth-8); }
+
+.listOn{
+	background-color:#DEE9F6;
+	color:#4B4F35;
+	text-decoration:none;
+	cursor:hand;
+	font-size:12px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.listout{
+	background-color:transparent;
+	color:#000000;
+	text-decoration:none;
+	cursor:hand;
+	font-size:12px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.listtd{
+    border-width:1px; 
+	border-color:rgb(204,204,204); 
+	border-style:solid;
+}
+.T_title {
+    border-width:1px; 
+	border-color:rgb(204,204,204); 
+	border-style:solid;
+	text-align:center;
+	background-color:#f7f7f7; 
+}
+.listclick{
+	background-color:B1D1F6;
+	color:#000000;
+	text-decoration:none;
+	cursor:hand;
+	font-size:12px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+A:link {
+	FONT-WEIGHT: normal; COLOR: #414042; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-WEIGHT: normal; COLOR: #414042; TEXT-DECORATION: none
+}
+A:active {
+	FONT-WEIGHT: normal; COLOR: #414042; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-WEIGHT: normal; COLOR: blue; TEXT-DECORATION: none
+}
+.style1 {
+	font-family: malgun;
+	font-size: 10px;
+	line-height:100%;
+}
+.f_title {
+	font-size: 20px;
+	color: #0a2369;
+	FONT-FAMILY: malgunbd;	
+	font-weight: bold;
+}
+.s_title {
+	font-size: 15px;
+	color: #6e6405;
+	FONT-FAMILY: malgunbd;	
+	font-weight: bold;
+}
+
+.style2 {
+	font-family: malgun;
+	font-size: 12px;
+	line-height:100%;
+}
+
+.style3 {
+	color: #1e788c;
+	font-size: 15px;
+	font-weight: bold;
+	
+}
+.style4 {
+	font-size: 15px;
+	font-weight: bold;
+	color: #51531f;
+	
+}
+.style5 {
+	font-size: 15px;
+	font-weight: bold;
+	color: #905c21;	
+}
+
+.style6 {
+	color: #695f05;
+	font-weight: bold;
+}
+
+
+.f3_title{
+	font-size: 20px;
+	color: #1e7891;
+	FONT-FAMILY: malgunbd;	
+	font-weight: bold;
+
+}
+.s3_title {
+	font-size: 15px;
+	color: #8f9112;
+	FONT-FAMILY: malgunbd;	
+	font-weight: bold;
+
+}
+.s4_title {
+	color: #6e6405;
+	font-size: 12px;
+	font-family: malgun;
+}
+.f4_title{
+	font-size: 20px;
+	color: #695f05;
+	FONT-FAMILY: malgunbd;	
+	font-weight: bold;
+
+}
+.f42_title{
+	font-size: 12px;
+	color: #804a21;
+	FONT-FAMILY: malgun;	
+
+}
+.f43_title {
+	color: #695f05;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.f6_title {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.textbox {
+border-width:1; border-color:rgb(204,204,204); border-style:solid; text-align:left;font-size:11px;  
+}
+
+.table_line {
+border-collapse:collapse; border-spacing:0;
+font-size:12px;
+}
+
+.pd_10 {
+padding:0 12px;
+}
+
+ul{
+margin:0px;
+padding:0px;
+list-style:none;
+}
+
+li{
+margin:0px;
+padding:0px;
+}
+
+
+
+
+/* 이미지용 롤오버 */
+A.roll img { display:inline; border:0;} 
+A.roll img.over { display:none; } 
+
+A.roll:hover { border:0; }
+A.roll:hover img { display:none; } 
+A.roll:hover img.over { display:inline; }
+
+/* 텍스트용 롤오버 */
+A.roll span { display:inline; } 
+A.roll span.over { display:none; } 
+
+A.roll:hover { border:0; }
+A.roll:hover span { display:none; } 
+A.roll:hover span.over { display:inline; } 
+
+
+ul li a {  
+    float:left;  
+	padding:0px;  
+    color:#ccc;  
+	font:bold 11px ;  
+    border:0px solid #eee;  
+    text-align:center;  
+    text-decoration:none;  
+} 
+
+
+ul li a:hover, ul li a:focus {  
+    color:#fff;  
+    border:1px solid #f40;  
+    background-color:#f40;  
+}

@@ -9,19 +9,126 @@ public class Boardbean {
 	private String content  ;
 	private String pass  ;
 	private String boardcount ;	
+		
+	private int replyno; 							//번호
+	private String writer;   					//글쓴이
+	private String reply;							//댓글내용
+	private java.util.Date replydate;	//댓글날짜
+	private String rpass;							//댓글 비밀번호
+	private int ref;		
 	
+	///////////////////////////////// page 멤버필드
+	
+	private String pnum ;
+	private int pageNUM;
+	public String getPnum() {
+		return pnum;
+	}
+	public void setPnum(String pnum) {
+		this.pnum = pnum;
+	}
+	public int getPageNUM() {
+		return pageNUM;
+	}
+	public void setPageNUM(int pageNUM) {
+		this.pageNUM = pageNUM;
+	}
+	public int getPagesize() {
+		return pagesize;
+	}
+	public void setPagesize(int pagesize) {
+		this.pagesize = pagesize;
+	}
+	public int getLimit() {
+		return limit;
+	}
+	public void setLimit(int limit) {
+		this.limit = limit;
+	}
+	public int getStart() {
+		return start;
+	}
+	public void setStart(int start) {
+		this.start = start;
+	}
+	public int getEnd() {
+		return end;
+	}
+	public void setEnd(int end) {
+		this.end = end;
+	}
+	public int getPagecount() {
+		return pagecount;
+	}
+	public void setPagecount(int pagecount) {
+		this.pagecount = pagecount;
+	}
+	public int getStartpage() {
+		return startpage;
+	}
+	public void setStartpage(int startpage) {
+		this.startpage = startpage;
+	}
+	public int getTemp() {
+		return temp;
+	}
+	public void setTemp(int temp) {
+		this.temp = temp;
+	}
+	public int getCntpage() {
+		return cntpage;
+	}
+	public void setCntpage(int cntpage) {
+		this.cntpage = cntpage;
+	}
+	public String getSkey() {
+		return skey;
+	}
+	public void setSkey(String skey) {
+		this.skey = skey;
+	}
+	public String getSval() {
+		return sval;
+	}
+	public void setSval(String sval) {
+		this.sval = sval;
+	}
+	public String getSqry() {
+		return sqry;
+	}
+	public void setSqry(String sqry) {
+		this.sqry = sqry;
+	}
+	public String getPageReturn() {
+		return pageReturn;
+	}
+	public void setPageReturn(String pageReturn) {
+		this.pageReturn = pageReturn;
+	}
+	private int pagesize ;
+	private int limit;
+	private int start;
+	private int end;
+	private int pagecount;
+	private int startpage;
+	private int temp;
+	private int cntpage;
+
+	private String skey;
+	private String sval;
+	private String sqry;
+	private String pageReturn; ;//검색시 페이지 클릭
+	
+	
+	/////////////////////////////////
 	public String getBoardcount() {
 		return boardcount;
 	}
 	public void setBoardcount(String boardcount) {
 		this.boardcount = boardcount;
 	}
-	private int replyno; 							//번호
-	private String writer;   					//글쓴이
-	private String reply;							//댓글내용
-	private java.util.Date replydate;	//댓글날짜
-	private String rpass;							//댓글 비밀번호
-	private int ref;									//ref필드가  board테이블의  boardno필드값 참조
+	
+		//ref필드가  board테이블의  boardno필드값 참조
 	public int getReplyno() {
 		return replyno;
 	}

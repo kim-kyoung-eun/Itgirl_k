@@ -135,9 +135,11 @@ table {
 }
 #main img{
 	position:relative;
+	left:10px;
 	margin:0 0 30 0px;
 	height:400px; 
-	width:480px;
+	width:500px;
+	padding: 0px;
 }
 #main2{
 	position:relative;
@@ -146,7 +148,7 @@ table {
 #main2 img{
 	position:relative;
 	right:0px;
-	height:200px; 
+	height:400px; 
 	width:200px;
 }
 #main3{
@@ -181,6 +183,8 @@ table {
 	height:300px;
 	
 }
+<!--memberList-->
+
 #memberList{
     width:1080px;
 	margin:10px;
@@ -207,48 +211,53 @@ table {
 	border:1px solid #FFEAEA;
 }
 <!-- join -->
+#j_ta1 table{
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	color:#7F7F7F;
+}
+#j_ta1 tr{
+	color:#606060;
+}
 
-
-table {
+#j_ta1 {
+	margin-top:60px;
+	font-family: SeoulNamsan B;
+	width: 620px;
+	height: 440px;
+	font-size: 11pt;
+	border:0.1em solid #F384AE;
+}
+#j_ta1 .title{
+	color:#F9F5F7;
+	font-size: 15pt;
 	font-family: SeoulNamsan EB;
-	position:absolute;
-	top:200px;
-	padding: 0px;
+}
+
+.td1{
+	font-family: SeoulNamsan B;
+	font-size:11pt;
 }
 
 
-#t1 {
+#j_ta1 .ta3{
+		color:blue;
+    }    
+#j_ta1 input {
 	font-family: SeoulNamsan B;
-	width: 700px;
+	border: 1px solid #E6E6E6;
 	font-size: 11pt;
-	border: 1px solid #D5D5D5;
-	margin: 30px;
-	padding: 0px;
+	width: 120px;
+	color:#7B7B7B;
 }
-#t1 td{
-	border: 1px solid #D5D5D5;
-}
-#t2{
-	position:relative;
-	right:30px;
+#j_ta1 .bt {
 	font-family: SeoulNamsan B;
-	width: 100%;
-	font-size: 11pt;
-	margin: 30px;
-	padding: 10px;
-	text-align: center;
-}
-
-input {
-	font-family: SeoulNamsan B;
-	border: 1px solid #D5D5D5;
+	border: 1px solid #FFE7F0;
 	font-size: 11pt;
 	width: 100px;
-}
-
-textarea {
-	font-family: "¸¼Àº °íµñ";
-	width: 700px;
+	color:#7B7B7B;
+	background-color: #FFE7F0;
 }
 
 <!--bottom-->

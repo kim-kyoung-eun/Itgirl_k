@@ -1,53 +1,64 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+	pageEncoding="EUC-KR"%>
 
 <html>
-<head> <title> [template.jsp] </title> 
+<head>
+<title>It girl</title>
 <style>
 @import url('css/shopping.css');
-</style>	
+</style>
 </head>
 <%
-	String pageFile = request.getParameter("pageFile");
-    if(pageFile=="" || pageFile==null ||pageFile.equals("main")){
+	String pageFile = request.getParameter("page");
+    if(pageFile=="" || pageFile==null){
     	pageFile="main.jsp";
-    }else if( pageFile.equals("boardList")){
-        pageFile="boardlist";
-    	//pageFile="list.do";
-    //}else if( pageFile.equals("insert.do")){
-    //	pageFile="board/boardDelete.jsp";
-    //}else if( pageFile.equals("detail.do")){
-    //	pageFile="board/boardDetail.jsp";
-    //}else if( pageFile.equals("edit.do")){
-    //	pageFile="board/Edit.jsp";
+    }else if( pageFile.equals("join")){
+    	pageFile="./join/join.jsp";
+    }else if( pageFile.equals("new")){
+    	pageFile="#";
+    }else if( pageFile.equals("top")){
+    	pageFile="#";
+    }else if( pageFile.equals("outer")){
+    	pageFile="#";
+    }else if( pageFile.equals("pants")){
+    	pageFile="#";
+    }else if( pageFile.equals("shoes")){
+    	pageFile="#";
+    }else if( pageFile.equals("QA")){
+    	pageFile="./board/boardList.jsp";
+    }else if( pageFile.equals("boardDetail")){
+    	pageFile="./board/boardDetail.jsp";
+    }else if( pageFile.equals("board")){
+    	pageFile="./board/board.jsp";
+    }else if( pageFile.equals("boardEdit")){
+    	pageFile="./board/boardEdit.jsp";
+    }else if( pageFile.equals("member")){
+    	pageFile="./member/memberList.jsp";
     }else if( pageFile.equals("login")){
-    	pageFile="login/login.jsp";
+    	pageFile="./login/login.jsp";   	
     }else{
-    	pageFile="main.jsp";
+    	pageFile="template.jsp";
     }
 
 %>
-	
-	<table width="100%" height="100%" border="1" cellspacing="0" >
-		<tr>
-			<td width="100%" colspan=3 height="45" align="left">
-				<jsp:include page="top.jsp" />
-			</td>
-		</tr>
-		
-		<tr>
-			<td width="100%" colspan=2 align="center">
-				<jsp:include page="<%=pageFile %>"/> 
-			</td>
-		</tr>
-		
-		<tr>
-			<td  width="100%" colspan=3 height="40" align="left">
-				<jsp:include page="bottom.jsp" />
-			</td>
-		</tr>
-	</table>
-	
+
+<table width="100%" height="100%" cellspacing="0">
+	<tr>
+		<td width="100%" height="45" align="left"><jsp:include
+				page="top.jsp" /></td>
+	</tr>
+
+	<tr>
+		<td width="85%" align="center"><jsp:include
+				page="<%= pageFile %>" /></td>
+	</tr>
+	<hr>
+	<tr>
+		<td width="100%" height="40" align="left"><jsp:include
+				page="bottom.jsp" /></td>
+	</tr>
+</table>
+
 <body>
 </body>
 </html>

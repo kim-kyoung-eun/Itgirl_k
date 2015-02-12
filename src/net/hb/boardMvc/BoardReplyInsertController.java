@@ -45,8 +45,8 @@ public class BoardReplyInsertController implements Action {
 			 
 			  dbsql.dbReplyInsert(bean);
 			  System.out.println("dbReplyInsert.java 저장성공");  
-			  //response.sendRedirect("GuestServlet?command=list.do"); //list.do=ListController.java
-			  response.sendRedirect("main/template.jsp?page=QA");
+			  response.sendRedirect("GuestServlet?command=list.do"); //list.do=ListController.java
+			  //response.sendRedirect("./main/template.jsp?page=QA");
 	 } //user end=========================================================
 	
 }//class END

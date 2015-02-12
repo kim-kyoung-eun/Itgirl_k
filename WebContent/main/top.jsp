@@ -1,12 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <html>
 <head>
 <title>[top.jsp]</title>
-<style>
-@import url('css/shopping.css');
-</style>
+<link rel="stylesheet" type="text/css" href="../css/shopping.css">
 </head>
 
 <body>
@@ -14,41 +12,45 @@
 		<div class="header3"
 			style="background-color: #EBEBEB; color: #353535; width: 1800px; height: 30px;">
 			<div class="header3-1">
-			<%
+					<%
 			if(session.getAttribute("id")==null || session.getAttribute("id")=="" ) {
 			%>
 			<a href="template.jsp?page=login">LOGIN</a>
+			|<a
+					href="template.jsp?page=join">JOIN</a>
+			|<a href="#">CART</a> |<a
+					href="#">ORDER</a>|<a href="template.jsp?page=mypage">MYPAGE</a>
 			<%
-			} else { //»∏ø¯¿Ã∏È
+			} else { //ÌöåÏõêÏù¥Î©¥
 				
-				if(session.getAttribute("admin").equals("1")) {out.print("∞¸∏Æ¿⁄"); //∞¸∏Æ¿⁄¿Ã∏È
+				if(session.getAttribute("admin").equals("1")) {out.print("Í¥ÄÎ¶¨Ïûê"); //Í¥ÄÎ¶¨ÏûêÏù¥Î©¥
 			%>
-				|<a href="admin/admin.jsp">∞¸∏Æ¿⁄∆‰¿Ã¡ˆ</a>
+				<a href="login/logOut.jsp">LOGOUT</a>|<a href="admin/admin.jsp">Í¥ÄÎ¶¨ÏûêÌéòÏù¥ÏßÄ</a>
 			<%
 				
-				} else {out.print(session.getAttribute("id"));}
+				} else {out.print(session.getAttribute("id"));
 			%>
-			   <a href="../login/logOut.jsp">LOGOUT</a>
-			<% } %>	
-				|<a
-					href="template.jsp?page=join">JOIN</a>|<a href="#">CART</a> |<a
-					href="#">ORDER</a>|<a href="#">MYPAGE</a>
+			<a href="login/logOut.jsp">LOGOUT</a>
+			|<a href="#">CART</a> |<a
+					href="#">ORDER</a>|<a href="template.jsp?page=mypage">MYPAGE</a>
+			   
+			<%} 
+			} %>	
+				
 			</div>
 		</div>
 		<div class="happy">
-			<img src="../images/top_13.jpg">
+			<img src="images/top_13.jpg">
 		</div>
 		<div class="header2">
-			<img src="../images/logo.png">
+			<a href="template.jsp?page=main"><img src="../images/logo.png"></a>
 		</div>
 
 		<div class="header4">
 			<a href="#"> NEW </a> <a href="#"> TOP </a> <a href="#"> OUTER </a> <a
-				href="#"> PANTS </a> <a href="#"> SHOES </a> <a href="template.jsp?page=QA"> Q&A </a>
-				<a href="template.jsp?page=member"> MEMBER </a>
- <!-- MEMBER¿∫ admin¿∏∑Œ ∑Œ±◊¿Œ«ﬂ¿ª∂ß∏∏ ∂ÁøÏ±‚ -->
+				href="#"> PANTS </a> <a href="#"> SHOES </a> <a href="../GuestServlet?command=list.do"> Q&A </a>
 		</div>
-		<img class="hr" src="../images/hr.png">
+		<img class="hr" src="images/hr.png">
 	</div>
 
 

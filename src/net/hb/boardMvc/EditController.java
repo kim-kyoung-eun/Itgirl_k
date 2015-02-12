@@ -39,7 +39,7 @@ public class EditController implements Action {
 		  dbsql.dbUpdate(bean); //사번이 동일한 기존데이타 수정
 		  System.out.println("EditController.java 수정성공\n");  
 		 // response.sendRedirect("GuestServlet?command=list.do"); 
-		  response.sendRedirect("main/template.jsp?page=QA");
+		  response.sendRedirect("./template.jsp?page=QA");
 	 } //user end=========================================================
 }//class END
 

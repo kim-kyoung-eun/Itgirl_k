@@ -4,7 +4,7 @@
 <title>로그인하기</title>
 </head>
 <body>
- <form method="post" action="../login.do">
+ <form method="post" action="login.do">
 	<label for="userid">아이디 : </label>
 	<input type="text" name="UID" id="UID"><br>
 

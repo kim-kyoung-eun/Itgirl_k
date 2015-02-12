@@ -32,7 +32,7 @@ public class DeleteController implements Action {
 		  dbsql.dbDelete(data);
 		  System.out.println("[DeleteController.java] 삭제성공");
 		  //response.sendRedirect("GuestServlet?command=list.do");
-		  response.sendRedirect("main/template.jsp?page=QA");
+		  response.sendRedirect("./template.jsp?page=QA");
 	 } //end
 	
 }//class END

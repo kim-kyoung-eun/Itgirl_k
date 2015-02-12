@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <%@ page import="java.util.*"%>
 <%@ page import="java.sql.*"%>
@@ -7,104 +7,67 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>memberList</title>
-<style>
-@import url('css/shopping.css');
-</style>
+<link rel="stylesheet" type="text/css" href="../css/shopping.css">
 </head>
 <%!
-  private  Connection CN; //db¼­¹ö¿¬°áÁ¤º¸ id/pass, CNÂüÁ¶ ¸í·É¾î»ı¼º  	
-  private  Statement  ST; //Á¤Àû¸í·É  ST=CN.createStatement( )
-  private  PreparedStatement  PST;//¹Ì¸®ÄÄÆÄÀÏ¸í·É¾î PST=CN.prepareStatement(sql);     
-  private  CallableStatement  CST ; //storedProcedureÄõ¸®¹®½ÇÇà
-  private  ResultSet RS; //RS=ST.executeQuery("select") Á¶È¸ÇÑ°á°ú
+  private  Connection CN; //dbì„œë²„ì—°ê²°ì •ë³´ id/pass, CNì°¸ì¡° ëª…ë ¹ì–´ìƒì„±  	
+  private  Statement  ST; //ì •ì ëª…ë ¹  ST=CN.createStatement( )
+  private  PreparedStatement  PST;//ë¯¸ë¦¬ì»´íŒŒì¼ëª…ë ¹ì–´ PST=CN.prepareStatement(sql);     
+  private  CallableStatement  CST ; //storedProcedureì¿¼ë¦¬ë¬¸ì‹¤í–‰
+  private  ResultSet RS; //RS=ST.executeQuery("select") ì¡°íšŒí•œê²°ê³¼
   
   private  String sql; //insert~ , select,  delete, update ~
 
-  private  int total=0; //·¹ÄÚµå°¹¼ö
+  private  int total=0; //ë ˆì½”ë“œê°¯ìˆ˜
   
   private String name, id, pw, birth, gender, email, phone, admin;
   
-  /////////////////³ªÁß¿¡ ÆäÀÌÂ¡°ü·Ã ÇÊµå ±â¼ú////////////////////////
+  /////////////////ë‚˜ì¤‘ì— í˜ì´ì§•ê´€ë ¨ í•„ë“œ ê¸°ìˆ ////////////////////////
 %>
-<%
-  try{
-  	Class.forName("oracle.jdbc.driver.OracleDriver");//1´Ü°è µå¶óÀÌºê·Îµå
-    //String url="jdbc:oracle:thin:@127.0.0.1:1521:XE"; //DB¼­¹öÁ¤º¸±â¼ú 430ÆäÀÌÁö 12¶óÀÎ
-	String url="jdbc:oracle:thin:@203.236.209.116:1521:XE";  
-    CN=DriverManager.getConnection(url, "system","oracle"); //32¶óÀÎ 
-  	//out.println("<h1>DB¼­¹ö ¿¬°á ¼º°ø!!!!! </h1>");
-  	System.out.println("<h1>DB¼­¹ö ¿¬°á ¼º°ø!!!!! </h1>");
-  }catch(Exception ex){
-  	//out.println("<h1>DB¼­¹ö ¿¬°á ½ÇÆĞ</h1>");
-  	System.out.println("¿¡·¯: " + ex.toString() );
-  }
-%>
+
 
 <body>
 
-
-	<%
- try{
-   sql="select count(*) as cnt from member";
-   ST=CN.createStatement();
-   RS=ST.executeQuery(sql); //RS°¡ ±â¾ïÇÏ´Â °ª 9
-   if(RS.next()==true){
-   	 total = RS.getInt("cnt") ;
-   }
- }catch(Exception ex){ }
- %>
 	<table id="memberList">
 		<tr>
-			<td style=" font-size: 16pt;" height="40" colspan="8" align="center">[È¸¿ø°ü¸®ÆäÀÌÁö]</td>
+			<td style=" font-size: 16pt;" height="40" colspan="8" align="center">[ë‚˜ì˜ì •ë³´ í˜ì´ì§€]</td>
 		</tr>
 	</table>
-	<table id="memberList" width="100%" cellpadding="0">
-
+	<table id="memberList" cellpadding="0">
+<%
+	try {
+		String id = (String)session.getAttribute("NowUser");
+%>
 		<tr class="tr" bgcolor="#FF77D1" height='50' align="center">
-			<td>ÀÌ¸§</td>
-			<td>¾ÆÀÌµğ</td>
-			<td>ºñ¹Ğ¹øÈ£</td>
-			<td>¼ºº°</td>
-			<td>»ıÀÏ</td>
-			<td style="width:200px;">ÀÌ¸ŞÀÏ</td>
-			<td style="width:150px;">ÀüÈ­¹øÈ£</td>
-			<td>±ÇÇÑ</td>
+			<td>ì´ë¦„</td>
+			<td>ì•„ì´ë””</td>
+			<td>ë¹„ë°€ë²ˆí˜¸</td>
+			<td>ì„±ë³„</td>
+			<td>ìƒì¼</td>
+			<td style="width:200px;">ì´ë©”ì¼</td>
+			<td style="width:150px;">ì „í™”ë²ˆí˜¸</td>
+			<td>ê¶Œí•œ</td>
 		</tr>
-		<%
-  try{   
-   sql="select * from member" ; //430ÆäÀÌÁö 15¶óÀÎ
-   ST=CN.createStatement();
-   RS=ST.executeQuery(sql);
-   while(RS.next()==true){
- 	name = RS.getString("name");
-    id = RS.getString("id");
-    pw = RS.getString("pw");
-    gender = RS.getString("gender");
-    birth = RS.getString("birth");
-    email = RS.getString("email");
-    phone = RS.getString("phone");
-    admin = RS.getString("admin");
- %>
+	
+	
 		<tr class="tr" onMouseOver="style.backgroundColor='#FFCCEE' "
 			onMouseOut="style.backgroundColor='#fff'" align="center">
-			<td><%= name %></td>
-			<td><a href="memberDetail.jsp?idx=<%= name %>"><%= id %></a></td>
-			<td><%= pw %></td>
-			<td><%= gender %></td>
-			<td><%= birth.substring(0,10) %></td>
-			<td><%= email %></td>
-			<td><%= phone %></td>
-			<td><%= admin %></td>
+			<td><%=id %></td>
+			<td>${bb.name}</td>
+			<td>${bb.pw}</td>
+			<td>${bb.gender}</td>
+			<td>${bb.birth}</td>
+			<td>${bb.email}</td>
+			<td>${bb.phone}</td>
+			<td>${bb.admin}</td>
 		</tr>
 
-		<%  	
-   }//whil end
-  }catch(Exception ex){  }
- %>
 	</table>
-
+<%
+	}catch(Exception e){  System.out.println("edit ì˜¤ë¥˜ : "+e.toString());}
+%>	
 	
 </body>
 </html>

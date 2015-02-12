@@ -6,32 +6,43 @@
 
 <html>
 <head> <title> [수정화면] </title> 
+<style type="text/css">
+	@import url('css/common.css');
+</style>
 </head>
- <font size=7 color=blue>
- <b> 
-  &nbsp;&nbsp;&nbsp;[수정화면] 
- </b></font><br>
+ <font size=3 color=blue>
+ <div align="center">
+
  
- <table width='800'  border='1'>
- <tr bgcolor="yellow"  height='60'  align="center">
- 	<td>번호</td>     <td>이름</td>   
- 	<td>제목</td>     <td>날짜</td>   <td>내용</td>      
+<table class="boardlist" width="70%" >
+ <tr><td colspan="5"><b>[상세보기]</b></td></tr>
+ <tr height='25' align="center">
+ 	<td class="boardlist_td" width="10%">번호</td>
+ 	<td class="boardlist_td" width="20%">이름</td>   
+ 	<td class="boardlist_td" width="20%">제목</td>
+ 	<td class="boardlist_td" width="40%">내용</td>
+ 	<td class="boardlist_td" width="10%">날짜</td>        
  </tr> 
  <tr height='60'>
- 	<td> ${bean.boardno} </td>
- 	<td> ${bean.name} </td>
- 	<td> ${bean.title} </td>
- 	<td> <fmt:formatDate value="${bean.nalja}" pattern="yyyy-MM-dd"/> </td>
- 	<td> ${bean.content } </td>
+ 	<td align="center"> ${bean.boardno} </td>
+ 	<td align="center"> ${bean.name} </td>
+ 	<td align="center"> ${bean.title} </td>
+ 	<td align="center"> ${bean.content } </td>
+ 	<td align="center"> <fmt:formatDate value="${bean.nalja}" pattern="yyyy-MM-dd"/> </td>
  </tr> 	
-</table>
+ </table><br>
+<div align="center">
+    <b> <a href="GuestServlet?command=board.do">[Q&A]등록</a>
+ 		<a href="GuestServlet?command=editPre.do&idx=${bean.boardno}">[상세수정]</a> &nbsp;
+ 		<a href="GuestServlet?command=list.do">[Q&A]</a>
+ 	</b>
+</div>
+
 
 <p>
  <h1>
     &nbsp;&nbsp;&nbsp;
- 	<!-- <a href="GuestServlet?command=board.do">[데이타입력]</a> &nbsp; -->
- 	<a href="GuestServlet?command=editPre.do&idx=${bean.boardno}">[수정]</a> &nbsp;
- 	<a href="./main/template.jsp?page=QA">[목록]</a> 
+
  </h1>
  <p>
   <!--  댓글 달기 연습  -->
@@ -41,8 +52,7 @@
        <jsp:param value="${bean.name}" name="Gname"/>
        <jsp:param value="${bean.title}" name="Gtitle"/>
     </jsp:include>
- <br><br><br><br>
- <p><br><br><br><br>
+</div>
 </body>
 </html>
 

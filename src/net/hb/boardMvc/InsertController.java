@@ -45,8 +45,8 @@ public class InsertController implements Action {
 			 
 			  dbsql.dbInsert(bean);
 			  System.out.println("InsertController.java 저장성공");  
-			  //response.sendRedirect("GuestServlet?command=list.do"); //list.do=ListController.java
-			  response.sendRedirect("main/template.jsp?page=QA");
+			  response.sendRedirect("GuestServlet?command=list.do"); //list.do=ListController.java
+			  //response.sendRedirect("./main/template.jsp?page=QA");
 	 } //user end=========================================================
 	
 }//class END
